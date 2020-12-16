@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><?Siebel-Property-Set EscapeNames="true"?><PropertySet
+ BC_spcName="CX Action"
+ BO_spcName="CX Action"
+ Field_spcValue_spcList="SC Request Status=Failed|SC Request Status Reason=(CXC406) The email address is invalid. Please update the email address and create a new activity to send email."
+ Search_spcExpr="Id=&apos;1-1A8KLY5D&apos; OR Id=&apos;1-1A8WTWHV&apos; OR Id=&apos;1-1A8UUWRX&apos; OR Id=&apos;1-1A8TO4HC&apos; OR Id=&apos;1-1A8N6U98&apos; OR Id=&apos;1-1A91PJD8&apos; OR Id=&apos;1-1A8SRA13&apos; OR Id=&apos;1-1A8RX00E&apos; OR Id=&apos;1-1A8YE3LW&apos; OR Id=&apos;1-1A8RXE2K&apos; OR Id=&apos;1-1A8RI4XT&apos; OR Id=&apos;1-1A94NCE2&apos; OR Id=&apos;1-1A8ZX68Z&apos; OR Id=&apos;1-1A8ONDQJ&apos; OR Id=&apos;1-1A8WT7RV&apos; OR Id=&apos;1-1A8Z7430&apos; OR Id=&apos;1-1A8NR4RE&apos; OR Id=&apos;1-1A94NAJ6&apos; OR Id=&apos;1-1A8Y80L7&apos; OR Id=&apos;1-1A8ONAWJ&apos; OR Id=&apos;1-1A8SR9WT&apos; OR Id=&apos;1-1A92RAPJ&apos; OR Id=&apos;1-1A94UQYE&apos;"
+></PropertySet
+>
