@@ -47,7 +47,7 @@
 		   SORT_SPECIFICATION="Root Order Item Id, Line Number"
 		   TABLE="S_ORDER_ITEM"
 		   TYPE="Non-Transient"
-		   UPDATED="12/15/2020 06:05:26"
+		   UPDATED="12/16/2020 05:19:18"
 		   UPDATED_BY="SYERUVA"
 		   CREATED="01/24/2020 18:20:23"
 		   CREATED_BY="KUMAS1">
