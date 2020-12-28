@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   COMMENTS="Siebel Repository_June_release_2019"
+   NAME="Siebel Repository"
+   UPDATED="06/13/2019 03:14:20"
+   UPDATED_BY="SADMIN"
+   CREATED="06/13/2019 00:00:02"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   INACTIVE="N"
+	   LOCKED="N"
+	   NAME="SC Coupons"
+	   UI_FREEZE="N"
+	   UPDATED="12/28/2020 05:25:48"
+	   UPDATED_BY="SYERUVA"
+	   CREATED="01/08/2012 21:04:48"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<BUSINESS_SERVICE
+		   CACHE="N"
+		   CLASS="CSSService"
+		   COMMENTS="PChanda 17-MAR-13: Created for Coupon tracking validation
+"
+		   EXTERNAL_USE="N"
+		   HIDDEN="N"
+		   INACTIVE="N"
+		   NAME="SC Coupon Tracking Service"
+		   OBJECT_LOCKED="N"
+		   SERVER_ENABLED="N"
+		   STATE_MANAGEMENT_TYPE="Stateful"
+		   WEB_SERVICE_ENABLED="N"
+		   UPDATED="12/28/2020 05:28:06"
+		   UPDATED_BY="SYERUVA"
+		   CREATED="03/19/2013 01:08:10"
+		   CREATED_BY="SADMIN">
+			<BUSINESS_SERVICE_LOCALE
+			   APPLICATION_CODE="STD"
+			   DISPLAY_NAME="SC Coupon Tracking Service"
+			   INACTIVE="N"
+			   LANGUAGE_CODE="ENU"
+			   NAME="ENU-STD"
+			   TRANSLATE="Y"
+			   UPDATED="03/19/2013 01:08:10"
+			   UPDATED_BY="SADMIN"
+			   CREATED="03/19/2013 01:08:10"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_LOCALE>
+			<BUSINESS_SERVICE_METHOD
+			   COMMENTS="[Jaikishan][20 Nov 2014][I-1543][Added a new method]"
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="LoyaltyCertificate"
+			   UPDATED="12/19/2014 16:24:22"
+			   UPDATED_BY="SADMIN"
+			   CREATED="11/20/2014 02:32:08"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CertificateValue"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/20/2014 02:36:50"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/20/2014 02:36:50"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ErrorCode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/20/2014 02:37:15"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/20/2014 02:37:15"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ErrorMessage"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="11/20/2014 02:37:39"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/20/2014 02:37:39"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   COMMENTS="12192014: KUMAS1: Added for Digital Integration"
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ExpirationDate"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="12/19/2014 16:24:22"
+				   UPDATED_BY="SADMIN"
+				   CREATED="12/19/2014 15:44:44"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="LoyaltyCertificateNum"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input / Output"
+				   UPDATED="11/20/2014 02:37:57"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/20/2014 02:37:57"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_LOCALE
+				   APPLICATION_CODE="STD"
+				   DISPLAY_NAME="LoyaltyCertificate"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="11/20/2014 02:32:32"
+				   UPDATED_BY="SADMIN"
+				   CREATED="11/20/2014 02:32:32"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_LOCALE>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="TrackCoupon"
+			   UPDATED="03/19/2013 08:13:35"
+			   UPDATED_BY="SADMIN"
+			   CREATED="03/19/2013 01:08:10"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CouponId"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input / Output"
+				   UPDATED="03/19/2013 08:13:26"
+				   UPDATED_BY="SADMIN"
+				   CREATED="03/19/2013 01:08:10"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomerNumber"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input / Output"
+				   UPDATED="03/19/2013 08:13:27"
+				   UPDATED_BY="SADMIN"
+				   CREATED="03/19/2013 01:08:10"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ErrorCode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="03/19/2013 08:13:29"
+				   UPDATED_BY="SADMIN"
+				   CREATED="03/19/2013 01:08:10"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ErrorMessage"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="03/19/2013 08:13:35"
+				   UPDATED_BY="SADMIN"
+				   CREATED="03/19/2013 01:08:10"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_LOCALE
+				   APPLICATION_CODE="STD"
+				   DISPLAY_NAME="TrackCoupon"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="03/19/2013 01:08:10"
+				   UPDATED_BY="SADMIN"
+				   CREATED="03/19/2013 01:08:10"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_LOCALE>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_METHOD
+			   COMMENTS="[Venkat Kota][08July2013][IF10022][Added NewMethod]"
+			   HIDDEN="N"
+			   INACTIVE="N"
+			   NAME="TrackLoyaltyCertificate"
+			   UPDATED="07/29/2013 06:33:14"
+			   UPDATED_BY="SADMIN"
+			   CREATED="07/08/2013 04:02:48"
+			   CREATED_BY="SADMIN">
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CertificateValue"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="07/22/2013 02:16:04"
+				   UPDATED_BY="SADMIN"
+				   CREATED="07/22/2013 02:15:40"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="CustomerNumber"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input / Output"
+				   UPDATED="07/08/2013 04:02:49"
+				   UPDATED_BY="SADMIN"
+				   CREATED="07/08/2013 04:02:49"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ErrorCode"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="07/29/2013 06:33:14"
+				   UPDATED_BY="SADMIN"
+				   CREATED="07/08/2013 04:02:49"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="ErrorMessage"
+				   OPTIONAL="Y"
+				   STORAGE_TYPE="Property"
+				   TYPE="Output"
+				   UPDATED="07/08/2013 04:02:49"
+				   UPDATED_BY="SADMIN"
+				   CREATED="07/08/2013 04:02:49"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_ARG
+				   DATA_TYPE="String"
+				   HIDDEN="N"
+				   INACTIVE="N"
+				   NAME="LoyaltyCertificateNum"
+				   OPTIONAL="N"
+				   STORAGE_TYPE="Property"
+				   TYPE="Input / Output"
+				   UPDATED="07/08/2013 04:04:20"
+				   UPDATED_BY="SADMIN"
+				   CREATED="07/08/2013 04:02:49"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_ARG>
+				<BUSINESS_SERVICE_METHOD_LOCALE
+				   APPLICATION_CODE="STD"
+				   DISPLAY_NAME="TrackLoyaltyCertificate"
+				   INACTIVE="N"
+				   LANGUAGE_CODE="ENU"
+				   NAME="ENU-STD"
+				   TRANSLATE="Y"
+				   UPDATED="07/08/2013 04:03:00"
+				   UPDATED_BY="SADMIN"
+				   CREATED="07/08/2013 04:02:49"
+				   CREATED_BY="SADMIN">
+				</BUSINESS_SERVICE_METHOD_LOCALE>
+			</BUSINESS_SERVICE_METHOD>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="(declarations)"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="var sErrMsg = &quot;&quot;,sErrMsg1 = &quot;&quot;,iErrCode = 0,CertificateValue=&quot;&quot;, dVoucherExpiredDate=&quot;&quot;;"
+			   SEQUENCE="1"
+			   UPDATED="12/19/2014 15:43:15"
+			   UPDATED_BY="SADMIN"
+			   CREATED="11/20/2014 02:31:26"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Coupon_Track"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Coupon_Track(sCouponId,sCustNumber)
+{
+
+/*****************************************************************************************
+Author: Pradeep Chanda
+Date: 03-19-2013
+Purpose: This business service is published as Web Service
+		 Does all the below validations
+		 1.Active Coupon check and date validation
+		 2.Coupon Code validation
+		 3.Coupon tracking record validation
+		 4.Customer Eligibilty validation
+		 5.ArjunS - 091114: changed the SC Start, SC End Date to Siebel OOB
+		   Start and End Date fields
+******************************************************************************************/
+  try
+  {
+		var oBOContact,oBCContact,oBCCouponTrack,oBOPromotion,oBCPromotion,oBCEligibility;
+		var sInstance=&quot;&quot;,sExpr1=&quot;&quot;,sCouponExists = &quot;N&quot;,sContactExists = &quot;N&quot;,sRetValue = &quot;N&quot;,sPromotionId=&quot;&quot;,sEligibility = &quot;&quot;,sExpr2=&quot;&quot;;
+		var dStDate = &quot;&quot;,dEndDate = &quot;&quot;,dDate = &quot;&quot;,serialCoupon = false,genericCoupon = false,contactCoupon=false,couponType=&quot;&quot;;
+		sErrMsg = &quot;&quot;,sErrMsg1 = &quot;&quot;,iErrCode = 0;
+		
+		TheApplication().SetProfileAttr(&quot;SCCouponType&quot;,&quot;&quot;);
+
+		oBOContact = TheApplication().GetBusObject(&quot;Contact&quot;);
+		oBCCouponTrack = oBOContact.GetBusComp(&quot;SC Coupon Tracking&quot;);
+		
+		oBOPromotion = TheApplication().GetBusObject(&quot;ISS Promotion&quot;);
+		oBCPromotion = oBOPromotion.GetBusComp(&quot;ISS Promotion&quot;);
+		oBCEligibility = oBOPromotion.GetBusComp(&quot;Product Eligibility BusComp&quot;);
+		
+		with (oBCPromotion) 
+		{
+			SetViewMode(AllView);
+			ActivateField(&quot;Instance&quot;);
+			ActivateField(&quot;Pre Pick CD&quot;);
+			ActivateField(&quot;SC Today Date&quot;);
+			ActivateField(&quot;Start Date&quot;);
+			ActivateField(&quot;End Date&quot;);
+			ActivateField(&quot;Promotion Id&quot;);
+			ClearToQuery();
+			SetSearchSpec(&quot;Promotion Id&quot;,sCouponId);
+			ExecuteQuery(ForwardOnly);
+			if (FirstRecord())
+			{
+				sInstance = GetFieldValue(&quot;Instance&quot;);
+				sPromotionId = GetFieldValue(&quot;Id&quot;);
+				sEligibility = GetFieldValue(&quot;Pre Pick CD&quot;);
+				dDate = new Date (GetFieldValue(&quot;SC Today Date&quot;));//ArjunS 10-24-13 Issue#947: Set the variable as Date fields to Compare
+				dStDate = new Date (GetFieldValue(&quot;Start Date&quot;));//ArjunS 10-24-13 Issue#947: Set the variable as Date fields to Compare
+				dEndDate = new Date (GetFieldValue(&quot;End Date&quot;));//ArjunS 10-24-13 Issue#947: Set the variable as Date fields to Compare
+			}
+			else
+			{
+			    sErrMsg = &quot;Invalid Coupon Code&quot;; 
+			    iErrCode = 1
+			 }
+		 }// with (sBCPromotion)
+		
+		 if (!(dDate &gt;= dStDate &amp;&amp; dDate &lt;= dEndDate))
+		 {
+			sErrMsg = &quot;Invalid Coupon; Coupon has expired.&quot;;
+			iErrCode = 1;
+		 }
+		
+		 //21-JUN-2018: Added to check the selected coupon is Contact Coupon or Serialized Coupon or Normal Coupon
+		 if(sErrMsg == &quot;&quot;){
+		 	 sExpr1 = &quot;[SC Customer Number] =&apos;&quot;+sCustNumber+&quot;&apos; AND [Product Id] =&apos;&quot;+sPromotionId+&quot;&apos;&quot;;
+			 sExpr2 = &quot;[SC Coupon Code] IS NOT NULL AND [Product Id] =&apos;&quot;+sPromotionId+&quot;&apos;&quot;;
+			 with (oBCEligibility)
+			 {
+				SetViewMode(AllView);
+				ActivateField(&quot;SC Customer Number&quot;);
+				ActivateField(&quot;Product Id&quot;);
+				ActivateField(&quot;Effective Start Date&quot;);
+				ActivateField(&quot;Effective End Date&quot;);
+				ClearToQuery();
+				SetSearchExpr(sExpr1);
+				ExecuteQuery(ForwardOnly);
+				if (FirstRecord()){
+					var dCoupStDate, dCoupEndDate;
+						var sStartDate = GetFieldValue(&quot;Effective Start Date&quot;);
+						if(sStartDate != &quot;&quot;){
+							dCoupStDate = new Date (GetFieldValue(&quot;Effective Start Date&quot;));
+						}
+						var sEnddate = GetFieldValue(&quot;Effective End Date&quot;);
+						if(sEnddate != &quot;&quot;){
+							dCoupEndDate = new Date (sEnddate);
+						}
+						if (!((sStartDate == &quot;&quot; || dDate &gt;= dCoupStDate) &amp;&amp; (sEnddate == &quot;&quot; || dDate &lt;= dCoupEndDate)))
+						{
+						sErrMsg = &quot;Invalid Coupon; Coupon has expired.&quot;;
+						iErrCode = 1;
+					 }else{
+					 	contactCoupon = true;
+					 }
+				}
+				else if(contactCoupon == false)		//serialCoupon = false;
+				{
+				    SetViewMode(AllView);
+					ActivateField(&quot;SC Coupon Code&quot;);
+					ActivateField(&quot;Product Id&quot;);
+					ActivateField(&quot;Effective Start Date&quot;);
+					ActivateField(&quot;Effective End Date&quot;);
+					ClearToQuery();
+					SetSearchExpr(sExpr2);
+					ExecuteQuery(ForwardOnly);
+					if (FirstRecord()){
+						serialCoupon = true;
+					}else{
+						serialCoupon = false;
+					}
+				}else{
+					sExpr2 = &quot;[Product Id] =&apos;&quot;+sPromotionId+&quot;&apos;&quot;;
+					SetViewMode(AllView);
+					ActivateField(&quot;Product Id&quot;);
+					ActivateField(&quot;Effective Start Date&quot;);
+					ActivateField(&quot;Effective End Date&quot;);
+					ClearToQuery();
+					SetSearchExpr(sExpr2);
+					ExecuteQuery(ForwardOnly);
+					if (FirstRecord()){
+						var dCoupStDate, dCoupEndDate;
+						var sStartDate = GetFieldValue(&quot;Effective Start Date&quot;);
+						if(sStartDate != &quot;&quot;){
+							dCoupStDate = new Date (GetFieldValue(&quot;Effective Start Date&quot;));
+						}
+						var sEnddate = GetFieldValue(&quot;Effective End Date&quot;);
+						if(sEnddate != &quot;&quot;){
+							dCoupEndDate = new Date (sEnddate);
+						}
+						if (!((sStartDate == &quot;&quot; || dDate &gt;= dCoupStDate) &amp;&amp; (sEnddate == &quot;&quot; || dDate &lt;= dCoupEndDate)))
+						{
+							sErrMsg = &quot;Invalid Coupon; Coupon has expired.&quot;;
+							iErrCode = 1;
+						 }else{
+							genericCoupon = false;
+						 }
+					}
+					else
+					{
+						genericCoupon = true;
+					}
+				}
+			}
+
+			if(serialCoupon == true){
+				TheApplication().SetProfileAttr(&quot;SCCouponType&quot;,&quot;SerializedCoupon&quot;);
+			}else if(genericCoupon == true){
+				TheApplication().SetProfileAttr(&quot;SCCouponType&quot;,&quot;GenericCoupon&quot;);
+			}else if(contactCoupon == true){
+				TheApplication().SetProfileAttr(&quot;SCCouponType&quot;,&quot;ContactCoupon&quot;);
+			}else{
+				TheApplication().SetProfileAttr(&quot;SCCouponType&quot;,&quot;&quot;);
+			}
+		}
+		
+		if  (sInstance == &quot;One Per Customer&quot; &amp;&amp; sPromotionId != &quot;&quot; &amp;&amp; sErrMsg == &quot;&quot; &amp;&amp; serialCoupon == false &amp;&amp; genericCoupon == false)
+		{
+			sExpr1 = &quot;[SC Customer Number] =&apos;&quot;+sCustNumber+&quot;&apos; AND [SC Coupon Id] =&apos;&quot;+sPromotionId+&quot;&apos;&quot;;
+			with (oBCCouponTrack)
+			{
+				SetViewMode(AllView);
+				ClearToQuery();
+				ActivateField(&quot;SC Order Number&quot;);
+				ActivateField(&quot;SC Customer Number&quot;);
+				ActivateField(&quot;SC Coupon Id&quot;);
+				SetSearchExpr(sExpr1);
+				ExecuteQuery(ForwardOnly);
+				if (FirstRecord())
+				{
+				 sCouponExists = &quot;Y&quot;;
+				 sErrMsg = &quot;The Coupon has been issued before on the Order # &quot;+GetFieldValue(&quot;SC Order Number&quot;)+&quot; and Coupon cannot re-used because of Coupon has One Per Customer restriction&quot;;
+				 iErrCode = 2;
+				}
+	
+			}// with (sBCPromotion)
+		}//	if  (sInstance == &quot;One Per Customer&quot; &amp;&amp; sPromotionId != &quot;&quot;)
+		
+		if (sPromotionId != &quot;&quot; &amp;&amp; sEligibility == &quot;Y&quot; &amp;&amp; sErrMsg == &quot;&quot; &amp;&amp; serialCoupon == false &amp;&amp; genericCoupon == false)
+		{
+		  sExpr2 = &quot;[SC Customer Number] =&apos;&quot;+sCustNumber+&quot;&apos; AND [Product Id] =&apos;&quot;+sPromotionId+&quot;&apos;&quot;;
+		 with (oBCEligibility)
+			{
+				SetViewMode(AllView);
+				ActivateField(&quot;SC Customer Number&quot;);
+				ActivateField(&quot;Product Id&quot;);
+				ClearToQuery();
+				SetSearchExpr(sExpr2);
+				ExecuteQuery(ForwardOnly);
+				if (FirstRecord())
+				 sContactExists = &quot;Y&quot;;
+				else
+				{
+				   sErrMsg = &quot;Customer is not eligible this Coupon, as this is Restricted Coupon&quot;;
+				   iErrCode = 3;
+				}
+			}// with (oBCEligibility)
+		}//if (sPromotionId != &quot;&quot; &amp;&amp; sEligibility == &quot;Y&quot;)
+		
+		if (sErrMsg == &quot;&quot;)
+		 sErrMsg = &quot;Valid Coupon Code&quot;;
+  }//try
+  catch(e)
+  {
+    sErrMsg1 = e.toString();
+    iErrCode = 100;
+  }
+  finally
+  {
+     oBCCouponTrack = null;
+	 oBOContact = null;
+	 oBCEligibility = null;
+	 oBCPromotion = null;
+	 oBOPromotion = null;
+  }
+}"
+			   SEQUENCE="2"
+			   UPDATED="12/13/2020 19:21:37"
+			   UPDATED_BY="VALLA"
+			   CREATED="03/19/2013 01:08:53"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="LoyaltyCertificate"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function LoyaltyCertificate(sLoyltycertiNum1)
+{
+/*****************************************************************************************
+Author: Jaikishan Bukalsaria
+Date: 19-11-2014
+Purpose: This business service is published as Web Service
+		 Does all the below validations
+		 1.Active Loyalty Certificate check and date validation
+		 2.Loyalty Certificate Code validation
+		 
+******************************************************************************************/
+
+try 
+{
+
+  var oBOContact,oBCLOYVoucher, oBCLOYMember;
+  var sStatus=&quot;&quot;,sSubStatus=&quot;&quot;,dVoucherIssuedDate=&quot;&quot;,dSCTodayDate=&quot;&quot;;
+  	sErrMsg = &quot;&quot;,sErrMsg1 = &quot;&quot;,iErrCode = 0,CertificateValue=&quot;&quot;;
+  	var sMemberId=&quot;&quot;,sDummyCustnumber=&quot;&quot;,sErrMsg2=&quot;&quot;;
+  	dVoucherExpiredDate = &quot;&quot;;
+
+    	oBOContact    = TheApplication().GetBusObject(&quot;Contact&quot;);
+		oBCLOYVoucher = oBOContact.GetBusComp(&quot;LOY Voucher&quot;);
+		with (oBCLOYVoucher) 
+		{
+			
+			ActivateField(&quot;SC Status&quot;);
+			ActivateField(&quot;SC Sub Status&quot;);
+			ActivateField(&quot;SC Today Date&quot;);
+			ActivateField(&quot;Voucher Issued Date&quot;);
+			ActivateField(&quot;Expiration Date&quot;);
+		//	ActivateField(&quot;SC Cert Value&quot;); SEELCX: 03-Jun-2015: Commented out for Defect #3921
+		    ActivateField(&quot;Product Name&quot;);
+			ActivateField(&quot;Member Id&quot;);
+			ClearToQuery();
+			SetViewMode(AllView);
+			SetSearchSpec(&quot;Voucher Number&quot;,sLoyltycertiNum1);
+			ExecuteQuery(ForwardOnly);
+			if (FirstRecord())
+				{
+					sStatus    				= GetFieldValue(&quot;SC Status&quot;);
+					sSubStatus			 	= GetFieldValue(&quot;SC Sub Status&quot;);
+				//	CertificateValue		= GetFieldValue(&quot;SC Cert Value&quot;); SEELCX: 03-Jun-2015: Commented out for Defect #3921
+				    CertificateValue		= GetFieldValue(&quot;Product Name&quot;);
+					dVoucherIssuedDate 		= GetFieldValue(&quot;Voucher Issued Date&quot;);
+					dVoucherExpiredDate 	= GetFieldValue(&quot;Expiration Date&quot;);
+					dSCTodayDate		 	= GetFieldValue(&quot;SC Today Date&quot;);
+					sMemberId		 		= GetFieldValue(&quot;Member Id&quot;);
+					
+					var vIssueDate		  = new Date(dVoucherIssuedDate);
+					var sPlanIssueStrtDay = vIssueDate.getTime();		
+					var vexpDate= new Date(dVoucherExpiredDate);
+					var sexpPlanStrtDay = vexpDate.getTime();
+					var vtodayDate       = new Date(dSCTodayDate);
+					var stdayPlanStrtDay = vtodayDate.getTime();
+					
+					 if(!(stdayPlanStrtDay &gt;= sPlanIssueStrtDay &amp;&amp; stdayPlanStrtDay &lt;= sexpPlanStrtDay))
+					    {
+							 sErrMsg  = &quot;Certificate Expired&quot;;
+							 iErrCode = 2;
+							 return(&quot;Expired&quot;);
+					    }
+		        	 else if(sStatus == &quot;Used&quot; || sStatus == &quot;Donated&quot;)//01072015: KUMAS1: Change to Status instead on Sub Status
+			              {
+			                sErrMsg = &quot;Certificate is already used&quot;; 
+						    iErrCode = 3;
+						    return(&quot;Used&quot;);
+	                       }
+				 }//MainifRecord
+				 
+				 
+			 else
+				 {
+					    sErrMsg = &quot;Invalid Certificate Number&quot;; 
+					    iErrCode = 1;
+					    return(&quot;Invalid&quot;);
+				  }
+		    
+		 }//End of With
+		 
+		     
+		 if (sErrMsg  == &quot;&quot;)
+		 {
+		    sErrMsg = &quot;Valid Certificate&quot;;
+		    return(&quot;Valid&quot;);
+		 }
+		        
+
+}
+	catch(e)
+	{
+	
+		sErrMsg1 = e.toString();
+		iErrCode = 4;
+		return(&quot;Exception&quot;);
+	}
+
+finally 
+{
+oBCLOYVoucher = null;
+oBCLOYMember = null;
+oBOContact = null;
+
+
+} 
+
+}"
+			   SEQUENCE="3"
+			   UPDATED="12/28/2020 05:25:48"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="11/20/2014 02:28:18"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+			<BUSINESS_SERVICE_SERVER_SCRIPT
+			   INACTIVE="N"
+			   NAME="Service_PreInvokeMethod"
+			   PROGRAM_LANGUAGE="JS"
+			   SCRIPT="function Service_PreInvokeMethod (MethodName, Inputs, Outputs)
+{
+/*****************************************************************************************
+Author: Pradeep Chanda
+Date: 03-19-2013
+Purpose: This business service is published as Web Service
+		 Does all the below validations
+		 1.Active Coupon check and date validation
+		 2.Coupon Code validation
+		 3.Coupon tracking record validation
+		 4.Customer Eligibilty validation
+Modified : 08/07/2013 IF10022 Added New method for validating loyalty certifcatenum.
+Modified : 19/11/2014 I_1543 Added a New Method for Loyalty Certificate with Hybris as Source
+
+Modified: KUMAS1: 05082015: Removed Extra code
+******************************************************************************************/
+
+ try
+ {
+	 if (MethodName ==&quot;TrackCoupon&quot;)
+	 {
+	   //local variables declaration
+	   var sCouponId=&quot;&quot;,sCustNumber=&quot;&quot;, sNullFlg = &quot;N&quot;;
+	   	
+	   sCouponId = Inputs.GetProperty(&quot;CouponId&quot;);
+	   sCustNumber = Inputs.GetProperty(&quot;CustomerNumber&quot;);
+	   
+	   //ArjunS 05/29/2013: Added to check Coupon Id and CustomerNumber is not null
+	   if (sCouponId != &quot;&quot; &amp;&amp; sCustNumber != &quot;&quot;)
+	    Coupon_Track(sCouponId,sCustNumber);
+	   
+	   if (sCouponId == &quot;&quot; &amp;&amp; sCustNumber == &quot;&quot;)
+	   {
+	   		sErrMsg = &quot;Invalid couponId &amp; Invalid Customer Number&quot;;
+	   		iErrCode = 1;
+	   		sNullFlg = &quot;Y&quot;;
+	   }
+	   
+	   if (sCouponId == &quot;&quot; &amp;&amp; sNullFlg == &quot;N&quot;)
+	   {
+	   		sErrMsg = &quot;Invalid couponId&quot;;
+	   		iErrCode = 1;
+	   }
+	   
+	   if (sCustNumber == &quot;&quot; &amp;&amp; sNullFlg == &quot;N&quot;)
+	   {
+	   		sErrMsg = &quot;Invalid Customer Number&quot;;
+	   		iErrCode = 1;
+	   }
+		 
+	   Outputs.SetProperty(&quot;ErrorMessage&quot;,sErrMsg);
+	   Outputs.SetProperty(&quot;ErrorCode&quot;,iErrCode);	
+	   
+	   return(CancelOperation);
+	  }
+	  
+	  
+	 if (MethodName ==&quot;LoyaltyCertificate&quot;)
+	 {
+	   //local variables declaration
+	   var sLoyltycertiNum1=&quot;&quot;,sCustnumber1=&quot;&quot;;
+	   var strRetVal = &quot;&quot;;
+	   dVoucherExpiredDate = &quot;&quot;;	  
+	    	
+	   sLoyltycertiNum1 = Inputs.GetProperty(&quot;LoyaltyCertificateNum&quot;);
+	   	   
+	   if (sLoyltycertiNum1 == &quot;&quot;)
+	   {
+	   		sErrMsg = &quot;Invalid Certificate Number&quot;;
+	   		iErrCode = 1;
+	   		strRetVal = &quot;Invalid&quot;;
+	   }
+	   else
+	   {
+	   		strRetVal = LoyaltyCertificate(sLoyltycertiNum1);
+	   }
+	   
+	   Outputs.SetProperty(&quot;ErrorMessage&quot;,sErrMsg);
+	   Outputs.SetProperty(&quot;ErrorCode&quot;,strRetVal);
+	   Outputs.SetProperty(&quot;CertificateValue&quot;,CertificateValue);
+	   Outputs.SetProperty(&quot;ExpirationDate&quot;,dVoucherExpiredDate);
+	   Outputs.SetProperty(&quot;LoyaltyCertificateNum&quot;,sLoyltycertiNum1);
+	   return(CancelOperation);
+	  }
+	  return (ContinueOperation);
+	
+  }
+  catch(e)
+  { 
+      sErrMsg1 = e.toString();
+  }
+  finally
+  {
+     if (sErrMsg1 != &quot;&quot;)
+     {
+		Outputs.SetProperty(&quot;ErrorMessage&quot;,sErrMsg1);
+		Outputs.SetProperty(&quot;ErrorCode&quot;,100);
+     }
+  }
+}"
+			   SEQUENCE="4"
+			   UPDATED="07/13/2018 06:36:56"
+			   UPDATED_BY="SADMIN"
+			   CREATED="03/19/2013 01:08:10"
+			   CREATED_BY="SADMIN">
+			</BUSINESS_SERVICE_SERVER_SCRIPT>
+		</BUSINESS_SERVICE>
+	</PROJECT>
+</REPOSITORY>
+
+
+
