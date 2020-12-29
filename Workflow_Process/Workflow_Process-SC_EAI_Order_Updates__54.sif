@@ -1,0 +1,4804 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<REPOSITORY
+   COMMENTS="Siebel Repository_June_release_2019"
+   NAME="Siebel Repository"
+   UPDATED="06/13/2019 03:14:20"
+   UPDATED_BY="SADMIN"
+   CREATED="06/13/2019 00:00:02"
+   CREATED_BY="SADMIN"
+   FIO_PLACEHOLDER_FIO="TRUE">
+	<PROJECT
+	   ALLOW_OBJECT_LOCKING="Y"
+	   COMMENTS="Jtorchon 11/21/11: For Marketing Integration services"
+	   INACTIVE="N"
+	   LANGUAGE_LOCKED="ENU"
+	   LOCKED="Y"
+	   LOCKED_DATE="12/29/2020 06:53:35"
+	   NAME="SC Web Integration"
+	   UI_FREEZE="N"
+	   LOCKED_BY_NAME="SYERUVA"
+	   UPDATED="12/29/2020 09:20:35"
+	   UPDATED_BY="SYERUVA"
+	   CREATED="11/21/2011 05:22:33"
+	   CREATED_BY="SADMIN"
+	   FIO_PLACEHOLDER_FIO="TRUE">
+		<WORKFLOW_PROCESS
+		   BUSINESS_OBJECT="PDS Simplified Order"
+		   COMMENTS="MANBARAS: 21-12-20: Chnaged Asyn Server Requests to Server Requests and Added retry parameters. PChanda 02-NOV-2017 : Updated for CHG0032241. PChanda 20-JUN-2016 : Updated for incident : 388398. PChanda 4-Dec-14 : Updated Customer Category steps."
+		   DESCRIPTION="PABBK0: 7-APR-2015 - Added the ParentOrderItemId process PropertySEELCX: 25-Mar-2015: updated to fix defect 2458, PABBK0: 17-MAR-2015 - Added the BO and Modified the WF for Asset Creation/Inactivation logic"
+		   EDIT="N"
+		   INACTIVE="N"
+		   NAME="SC EAI Order Updates: 54"
+		   OBJECT_LOCKED="N"
+		   PASS_BY_REF_HIERARCHY_ARGUMENT="N"
+		   PROCESS_NAME="SC EAI Order Updates"
+		   REPLICATION_LEVEL="None"
+		   RUNNABLE="N"
+		   STATE_MANAGEMENT_TYPE="STATEFUL"
+		   STATUS="COMPLETED"
+		   VERSION="54"
+		   WEB_SERVICE_ENABLED="N"
+		   WORKFLOW_MODE="Service Flow"
+		   UPDATED="12/29/2020 09:20:50"
+		   UPDATED_BY="SYERUVA"
+		   CREATED="12/29/2020 06:53:21"
+		   CREATED_BY="SYERUVA">
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="AlreadyReceiptCreated"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="Async HD Request Id"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="Async RMA Request Id"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="Async Request Id"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="01062015: Added for SIQ trigger change. incident 374873"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="PROPSET_CHILD"
+			   INOUT="NONE"
+			   NAME="AsyncSIQInputs"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="PRAYSX 13-2-2015: Changed In/Out to None"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="PROPSET_CHILD"
+			   INOUT="NONE"
+			   NAME="AsyncWFInputs"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Channel"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Count"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="Error Code"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="Error Message"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   DEFAULT_STRING="Y"
+			   INOUT="INOUT"
+			   NAME="Execute Query"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="[Venkat Kota][Added for Defect 3187]"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   DEFAULT_STRING="123"
+			   INOUT="INOUT"
+			   NAME="FSId"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="CHANP2 23-MAY-18 : Added for CHG0032950"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="HDSRStatus"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="LineCancelFlag"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="OUT"
+			   NAME="LineId"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="PChanda 20-JUN-2016 : Created for incident : 388398"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="LineInvDate"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="PChanda 20-JUN-2016 : Created for incident : 388398"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="LineInvNum"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="PChanda 20-JUN-2016 : Created for incident 388398."
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="LineParentId"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="PChanda 01-NOV-2011 : Created for CHG0032241"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="LineSource"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="OUT"
+			   NAME="LineStatus"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   DISPLAY_NAME="LineType"
+			   INOUT="NONE"
+			   NAME="LineType"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="Object Id"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="OrderCancelReason"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="OUT"
+			   NAME="OrderId"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="ALIAS"
+			   DEFAULT_STRING="OrderMessage/ListOfSWIOrderIO/SWIOrder/@Id"
+			   INOUT="NONE"
+			   NAME="OrderIdA"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="INT_OBJ"
+			   INOUT="IN"
+			   INTEGRATION_OBJECT="SWIOrderIO"
+			   NAME="OrderMessage"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="OrderRevisionNum"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="OrderStatus"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="OrderTypeCode"
+			   UPDATED="12/29/2020 07:19:34"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 07:19:12"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="PaymentId"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="Process Instance Id"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="PChanda 03-NOV-2011 : Created for CHG0032241"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="ProductLine"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="PROPSET_CHILD"
+			   INOUT="NONE"
+			   NAME="RMAWFInputs"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Revision"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   DISPLAY_NAME="RootAssetDuplicateFlag"
+			   INOUT="NONE"
+			   NAME="RootAssetDuplicateFlag"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   DISPLAY_NAME="RootOrderItemId"
+			   INOUT="NONE"
+			   NAME="RootOrderItemId"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="RootOrderItemProdId"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="RootOrderItemShipVia"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="SCOrderSubType"
+			   UPDATED="12/29/2020 07:42:37"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 07:36:39"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="Siebel Operation Object Id"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="StoredHeaderStatus"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="NONE"
+			   NAME="Subchannel"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   COMMENTS="PChanda 20-JUN-2016 : Created for incident : 388398"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="TrackingNumExists"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_PROCESS_PROP
+			   ACCESS_MODE="RW"
+			   CORRELATOR_FLAG="N"
+			   DATA_TYPE="VARCHAR"
+			   INOUT="INOUT"
+			   NAME="UpdateType"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+			</WF_PROCESS_PROP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*188 468 284 5169*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="Asset Creation - External"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 06:53:21"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:21"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*108 5074*FrHS1*02*P17*108 4924*NPts1*32*P07*188 4924*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 21"
+				   TO_STEP_NAME="Root Asset Duplicate Flag IS NULL"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Asset Creation - External"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*108 5074*FrHS1*02*P17*108 4924*NPts1*32*P07*188 4924*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 21"
+					   TO_STEP_NAME="Root Asset Duplicate Flag IS NULL"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r17*1080 586 1176 6349*FillBgClr8*100794878*ArrowEnd1*1"
+			   NAME="CX Email Quote Workflow"
+			   SUBPROCESS_NAME="CX Email Quote Workflow"
+			   TYPE="SUB_PROCESS"
+			   UPDATED="12/29/2020 06:53:21"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:21"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*648 7084*FrHS1*32*P18*1128 7084*NPts1*32*P08*1128 6344*ToHS1*28*ArrowEnd1*4"
+				   NAME="Connector 25"
+				   TO_STEP_NAME="End"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="CX Email Quote Workflow"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*648 7084*FrHS1*32*P18*1128 7084*NPts1*32*P08*1128 6344*ToHS1*28*ArrowEnd1*4"
+					   NAME="Connector 25"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Category 1"
+				   SEQUENCE="3"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="Web Order Received"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Object Id"
+				   PROPERTY_NAME="OrderIdA"
+				   SEQUENCE="1"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="ReportType"
+				   SEQUENCE="2"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="Sales Order Receipt"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="SubmitRequest"
+			   BUSINESS_SERVICE_NAME="Asynchronous Server Requests"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*649 604 745 6529*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Call Async Book SIQ"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:21"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:21"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*600 6844*FrHS1*02*P17*600 6284*NPts1*32*P07*649 6284*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 24"
+				   TO_STEP_NAME="End"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Call Async Book SIQ"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*600 6844*FrHS1*02*P17*600 6284*NPts1*32*P07*649 6284*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 24"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Component"
+				   SEQUENCE="15"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="WfProcMgr"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inputs"
+				   PROPERTY_NAME="AsyncSIQInputs"
+				   SEQUENCE="16"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Call Async Book SIQ170"
+				   OUTPUT_ARG="reqId"
+				   PROPERTY_NAME="Async Request Id"
+				   SEQUENCE="17"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="CallAsyncWF"
+			   BUSINESS_SERVICE_NAME="SC Customer Category Async BS"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*724 264 820 3129*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Call Async WF BS"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:21"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:21"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 3364*NPts1*22*P07*772 3124*ToHS1*18*ArrowEnd1*4"
+				   NAME="Error"
+				   TO_STEP_NAME="Set RMA Lbl WF Inputs"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Call Async WF BS"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 3364*NPts1*22*P07*772 3124*ToHS1*18*ArrowEnd1*4"
+					   NAME="Error"
+					   TO_STEP_NAME="Set RMA Lbl WF Inputs"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P27*976 2404*FrHS1*22*P17*976 2885*HdTxt1*Y4*NPts1*32*P07*820 2884*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error  4"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Call Async WF BS"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P27*976 2404*FrHS1*22*P17*976 2885*HdTxt1*Y4*NPts1*32*P07*820 2884*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error  4"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="RowId"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="3"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r14*60 120 156 1689*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="Cancel Header?"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 06:53:21"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:21"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P26*24 3004*FrHS1*02*P16*24 1445*HdTxt1*Y4*NPts1*42*P06*60 1442*P36*49 3004*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 5"
+				   TO_STEP_NAME="Line Update?"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Cancel Header?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P26*24 3004*FrHS1*02*P16*24 1445*HdTxt1*Y4*NPts1*42*P06*60 1442*P36*49 3004*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 5"
+					   TO_STEP_NAME="Line Update?"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(OrderCancelReason Is Not Null) AND (OrderStatus This Must Match (Ignore Case)(&apos;Closed&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P26*96 1804*FrHS1*32*P17*108 1804*NPts1*42*P07*108 1682*P36*96 1924*ToHS1*18*ArrowEnd1*4"
+				   NAME="Y"
+				   TO_STEP_NAME="Update Order Status"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Cancel Header?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P26*96 1804*FrHS1*32*P17*108 1804*NPts1*42*P07*108 1682*P36*96 1924*ToHS1*18*ArrowEnd1*4"
+					   NAME="Y"
+					   TO_STEP_NAME="Update Order Status"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Y7"
+					   OPERATION="IS_NOT_NULL"
+					   PROPERTY_NAME="OrderCancelReason"
+					   SEQUENCE="7"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CRITERIA>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Y8"
+					   OPERATION="EQ_THIS_NC"
+					   PROPERTY_NAME="OrderStatus"
+					   SEQUENCE="8"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Closed"
+						   NAME="Y82"
+						   SEQUENCE="2"
+						   UPDATED="12/29/2020 06:53:21"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:21"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r17*1080 338 1176 3869*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="Check ECOM/WEB"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 07:44:01"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:21"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P28*1201 7574*FrHS1*22*P18*1201 3624*NPts1*52*P08*1176 3622*P37*600 7574*ToHS1*32*P47*600 7328*ArrowEnd1*4"
+				   NAME="Non-Web"
+				   TO_STEP_NAME="End"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check ECOM/WEB"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P28*1201 7574*FrHS1*22*P18*1201 3624*NPts1*52*P08*1176 3622*P37*600 7574*ToHS1*32*P47*600 7328*ArrowEnd1*4"
+					   NAME="Non-Web"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="( All Must Match (Ignore Case)(&apos;([&amp;Channel] = &apos;ECOM&apos; AND [&amp;Subchannel] = &apos;WEBSITE&apos; AND [&amp;Revision] = 1 AND [&amp;OrderTypeCode] = &apos;Sales&apos; AND [&amp;SCOrderSubType] = &apos;Sale&apos;)&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P18*1128 4254*NPts1*22*P08*1128 3864*ToHS1*18*ArrowEnd1*4"
+				   NAME="Web"
+				   TO_STEP_NAME="Check Order Receipt"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 07:44:01"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check ECOM/WEB"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P18*1128 4254*NPts1*22*P08*1128 3864*ToHS1*18*ArrowEnd1*4"
+					   NAME="Web"
+					   TO_STEP_NAME="Check Order Receipt"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="EXPRESSION"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Web5"
+					   OPERATION="EQ_ALL_NC"
+					   SEQUENCE="5"
+					   UPDATED="12/29/2020 07:44:01"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR5="([&amp;Channel] = &apos;ECOM&apos; AND [&amp;Subchannel] = &apos;WEBSITE&apos; AND [&amp;Revision] = 1 AND [&amp;OrderTypeCode] = &apos;Sales&apos; AND [&amp;SCOrderSubType] = &apos;Sale&apos;)"
+						   NAME="Web51"
+						   SEQUENCE="1"
+						   UPDATED="12/29/2020 07:44:01"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:21"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="Echo"
+			   BUSINESS_SERVICE_NAME="Workflow Utilities"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r17*1080 425 1176 4739*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Check Order Receipt"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 08:09:44"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:21"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P18*1128 5044*NPts1*22*P08*1128 4734*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 22"
+				   TO_STEP_NAME="Check Web Order?"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check Order Receipt"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P18*1128 5044*NPts1*22*P08*1128 4734*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 22"
+					   TO_STEP_NAME="Check Web Order?"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P28*1055 2164*FrHS1*02*P18*1055 4495*HdTxt1*Y4*NPts1*42*P08*1080 4492*P38*1024 2164*ToHS1*29*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 12"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check Order Receipt"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P28*1055 2164*FrHS1*02*P18*1055 4495*HdTxt1*Y4*NPts1*42*P08*1080 4492*P38*1024 2164*ToHS1*29*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 12"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Check Order Receipt90"
+				   PROPERTY_NAME="AlreadyReceiptCreated"
+				   SEQUENCE="9"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="BCHasRows (&quot;SN Service Request&quot;, &quot;SN Action&quot;, &quot;[Order Id] = &apos;&quot; + [&amp;OrderIdA] + &quot;&apos; AND [Type] = &apos;Order Communication&apos; AND ([SN CX Category1] = &apos;Sales Order Receipt&apos; OR [SN CX Category1] = &apos;Web Order Received&apos;) AND [SN CX Category2] = &apos;Email&apos;&quot;, &quot;All&quot;) = &quot;Y&quot;"
+				   UPDATED="12/29/2020 08:09:44"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r17*1080 504 1176 5529*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="Check Web Order?"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 06:53:21"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:21"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P28*1201 7084*FrHS1*22*P18*1201 5284*NPts1*42*P08*1176 5282*P37*648 7084*ToHS1*28*ArrowEnd1*4"
+				   NAME="N"
+				   TO_STEP_NAME="End"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check Web Order?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P28*1201 7084*FrHS1*22*P18*1201 5284*NPts1*42*P08*1176 5282*P37*648 7084*ToHS1*28*ArrowEnd1*4"
+					   NAME="N"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="( All Must Match (Ignore Case)(&apos;([&amp;Revision] &gt;= 1 AND [&amp;AlreadyReceiptCreated] = &apos;N&apos;)&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P18*1128 5864*NPts1*22*P08*1128 5524*ToHS1*18*ArrowEnd1*4"
+				   NAME="Y"
+				   TO_STEP_NAME="CX Email Quote Workflow"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check Web Order?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P18*1128 5864*NPts1*22*P08*1128 5524*ToHS1*18*ArrowEnd1*4"
+					   NAME="Y"
+					   TO_STEP_NAME="CX Email Quote Workflow"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="EXPRESSION"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Y2"
+					   OPERATION="EQ_ALL_NC"
+					   SEQUENCE="2"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR5="([&amp;Revision] &gt;= 1 AND [&amp;AlreadyReceiptCreated] = &apos;N&apos;)"
+						   NAME="Y21"
+						   SEQUENCE="1"
+						   UPDATED="12/29/2020 06:53:21"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:21"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r14*60 390 156 4389*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="Check the Status"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 06:53:21"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:21"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(LineType None Can Match(&apos;Product Owned&apos;)) AND (LineStatus One Must Match(&apos;Closed&apos; AND &apos;In-Transit to Customer&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*108 5074*NPts1*22*P07*108 4384*ToHS1*18*ArrowEnd1*4"
+				   NAME="Asset Creation"
+				   TO_STEP_NAME="Root Asset Duplicate Flag IS NULL"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:21"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:21"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check the Status"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*108 5074*NPts1*22*P07*108 4384*ToHS1*18*ArrowEnd1*4"
+					   NAME="Asset Creation"
+					   TO_STEP_NAME="Root Asset Duplicate Flag IS NULL"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Asset Creation1"
+					   OPERATION="NE_ALL"
+					   PROPERTY_NAME="LineType"
+					   SEQUENCE="3"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Product Owned"
+						   NAME="Asset Creation11"
+						   SEQUENCE="1"
+						   UPDATED="12/29/2020 06:53:21"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:21"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Asset Creation4"
+					   OPERATION="EQ_ANY"
+					   PROPERTY_NAME="LineStatus"
+					   SEQUENCE="7"
+					   UPDATED="12/29/2020 06:53:21"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:21"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Closed"
+						   NAME="Asset Creation41"
+						   SEQUENCE="2"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="In-Transit to Customer"
+						   NAME="Asset Creation43"
+						   SEQUENCE="3"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(LineType All Must Match (Ignore Case)(&apos;Product Owned&apos;)) AND (LineStatus One Must Match(&apos;Closed&apos; AND &apos;Return Recieved&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*312 4144*NPts1*22*P07*156 4144*ToHS1*08*ArrowEnd1*4"
+				   NAME="Asset Inactivate"
+				   TO_STEP_NAME="Set Inputs for Async WF"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check the Status"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*312 4144*NPts1*22*P07*156 4144*ToHS1*08*ArrowEnd1*4"
+					   NAME="Asset Inactivate"
+					   TO_STEP_NAME="Set Inputs for Async WF"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Asset Inactivate1"
+					   OPERATION="EQ_ALL_NC"
+					   PROPERTY_NAME="LineType"
+					   SEQUENCE="3"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Product Owned"
+						   NAME="Asset Inactivate11"
+						   SEQUENCE="1"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Asset Inactivate4"
+					   OPERATION="EQ_ANY"
+					   PROPERTY_NAME="LineStatus"
+					   SEQUENCE="8"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Closed"
+						   NAME="Asset Inactivate41"
+						   SEQUENCE="2"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Return Recieved"
+						   NAME="Asset Inactivate43"
+						   SEQUENCE="3"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(LineType None Can Match(&apos;Product Owned&apos;)) AND (LineStatus One Must Match(&apos;At Supplier&apos;)) AND (LineSource One Must Match(&apos;FROM VENDOR&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*236 4684*FrHS1*22*P17*156 4684*NPts1*32*P07*156 4144*ToHS1*18*ArrowEnd1*4"
+				   NAME="At Supplier"
+				   TO_STEP_NAME="Asset Creation - External"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check the Status"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*236 4684*FrHS1*22*P17*156 4684*NPts1*32*P07*156 4144*ToHS1*18*ArrowEnd1*4"
+					   NAME="At Supplier"
+					   TO_STEP_NAME="Asset Creation - External"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="At Supplier11"
+					   OPERATION="EQ_ANY"
+					   PROPERTY_NAME="LineStatus"
+					   SEQUENCE="11"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="At Supplier"
+						   NAME="At Supplier111"
+						   SEQUENCE="2"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="At Supplier12"
+					   OPERATION="EQ_ANY"
+					   PROPERTY_NAME="LineSource"
+					   SEQUENCE="12"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="FROM VENDOR"
+						   NAME="At Supplier123"
+						   SEQUENCE="3"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="At Supplier5"
+					   OPERATION="NE_ALL"
+					   PROPERTY_NAME="LineType"
+					   SEQUENCE="5"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Product Owned"
+						   NAME="At Supplier51"
+						   SEQUENCE="1"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(LineStatus All Must Match (Ignore Case)(&apos;Cancelled&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*12*0*0*0*6*TxtPos1*29*LineWidth1*22*P27*180 4504*FrHS1*22*P17*180 4144*NPts1*52*P07*156 4147*TxtPerc2*702*P37*348 4504*ToHS1*32*P47*348 4388*ArrowEnd1*4"
+				   NAME="Cancelled"
+				   TO_STEP_NAME="Set Inputs for Async WF"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check the Status"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*12*0*0*0*6*TxtPos1*29*LineWidth1*22*P27*180 4504*FrHS1*22*P17*180 4144*NPts1*52*P07*156 4147*TxtPerc2*702*P37*348 4504*ToHS1*32*P47*348 4388*ArrowEnd1*4"
+					   NAME="Cancelled"
+					   TO_STEP_NAME="Set Inputs for Async WF"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Cancelled1"
+					   OPERATION="EQ_ALL_NC"
+					   PROPERTY_NAME="LineStatus"
+					   SEQUENCE="11"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Cancelled"
+						   NAME="Cancelled11"
+						   SEQUENCE="4"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P26*35 7084*FrHS1*02*P16*35 4144*NPts1*42*P06*60 4142*P37*552 7084*ToHS1*08*ArrowEnd1*4"
+				   NAME="Default"
+				   TO_STEP_NAME="End"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Check the Status"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P26*35 7084*FrHS1*02*P16*35 4144*NPts1*42*P06*60 4142*P37*552 7084*ToHS1*08*ArrowEnd1*4"
+					   NAME="Default"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="SubmitRequest"
+			   BUSINESS_SERVICE_NAME="Server Requests"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*724 402 820 4509*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Create RMA Labels"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 4684*NPts1*22*P07*772 4504*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 3"
+				   TO_STEP_NAME="Query Payments"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Create RMA Labels"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 4684*NPts1*22*P07*772 4504*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 3"
+					   TO_STEP_NAME="Query Payments"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P27*976 2404*FrHS1*22*P17*976 4265*HdTxt1*Y4*NPts1*32*P07*820 4264*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 2"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Create RMA Labels"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P27*976 2404*FrHS1*22*P17*976 4265*HdTxt1*Y4*NPts1*32*P07*820 4264*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 2"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Component"
+				   SEQUENCE="5"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="WfProcMgr"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Method"
+				   SEQUENCE="12"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="RunProcess"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Mode"
+				   SEQUENCE="8"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="DirectDb"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="NumRetries"
+				   SEQUENCE="9"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="3"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Create RMA Labels70"
+				   OUTPUT_ARG="reqId"
+				   PROPERTY_NAME="Async RMA Request Id"
+				   SEQUENCE="7"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="ReqIDNeeded"
+				   SEQUENCE="13"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="FALSE"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="RetryInterval"
+				   SEQUENCE="10"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="3"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="RetryOnError"
+				   SEQUENCE="11"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="1"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="WfProcMgr.Object Id"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="15"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="WfProcMgr.ProcessName"
+				   SEQUENCE="14"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="SC RMA Label Generation"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="SubmitRequest"
+			   BUSINESS_SERVICE_NAME="Asynchronous Server Requests"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*5*0*0*0*8*FontSize1*91*r15*724 192 820 2409*FillBgClr5*655358*FontName6*Tahoma8*ArrowEnd1*1"
+			   NAME="Create/Update HD SR"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 2644*NPts1*22*P07*772 2404*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 2"
+				   TO_STEP_NAME="Call Async WF BS"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Create/Update HD SR"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 2644*NPts1*22*P07*772 2404*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 2"
+					   TO_STEP_NAME="Call Async WF BS"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*24*FrHS1*22*P17*928 2165*HdTxt1*Y4*NPts1*22*P07*820 2164*ToHS1*09*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 1"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Create/Update HD SR"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*24*FrHS1*22*P17*928 2165*HdTxt1*Y4*NPts1*22*P07*820 2164*ToHS1*09*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 1"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Component"
+				   SEQUENCE="1"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="WfProcMgr"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inputs"
+				   PROPERTY_NAME="AsyncWFInputs"
+				   SEQUENCE="2"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Create/Update HD SR30"
+				   OUTPUT_ARG="reqId"
+				   PROPERTY_NAME="Async HD Request Id"
+				   SEQUENCE="3"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*552 684 648 7329*FillBgClr8*167641088*ArrowEnd1*1"
+			   NAME="End"
+			   TYPE="END"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:End10"
+				   PROPERTY_NAME="Error Code"
+				   SEQUENCE="1"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="GetFieldValues"
+			   BUSINESS_SERVICE_NAME="Inbound E-mail Database Operations"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*178 276 274 3249*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Get Line Root Order Item Id"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*324 3004*NPts1*22*P07*274 3004*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 8"
+				   TO_STEP_NAME="Post Processes"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Get Line Root Order Item Id"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*324 3004*NPts1*22*P07*274 3004*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 8"
+					   TO_STEP_NAME="Post Processes"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 2524*FrHS1*12*P17*226 2525*HdTxt1*Y4*NPts1*42*P07*226 2762*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 6"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Get Line Root Order Item Id"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 2524*FrHS1*12*P17*226 2525*HdTxt1*Y4*NPts1*42*P07*226 2762*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 6"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="BusComp"
+				   SEQUENCE="1"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="PDS Simplified Order Entry - Line Items"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="BusObj"
+				   SEQUENCE="2"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="PDS Simplified Order  - Line Items"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Id"
+				   PROPERTY_NAME="LineId"
+				   SEQUENCE="3"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="IdField"
+				   SEQUENCE="4"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="Id"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id100"
+				   OUTPUT_ARG="SC Root Item Ship Method"
+				   PROPERTY_NAME="RootOrderItemShipVia"
+				   SEQUENCE="10"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id110"
+				   OUTPUT_ARG="SC Order Revision Number"
+				   PROPERTY_NAME="OrderRevisionNum"
+				   SEQUENCE="11"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id13"
+				   OUTPUT_ARG="Request To Cancel"
+				   PROPERTY_NAME="LineCancelFlag"
+				   SEQUENCE="13"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id140"
+				   OUTPUT_ARG="SC Order Status"
+				   PROPERTY_NAME="StoredHeaderStatus"
+				   SEQUENCE="14"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   COMMENTS="12132016: Sanjeev: 360 HD Updates"
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id150"
+				   OUTPUT_ARG="Root Product Id"
+				   PROPERTY_NAME="RootOrderItemProdId"
+				   SEQUENCE="15"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id160"
+				   OUTPUT_ARG="SC Product Primary Product Line"
+				   PROPERTY_NAME="ProductLine"
+				   SEQUENCE="16"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id170"
+				   OUTPUT_ARG="SC SKU Data Source Calc"
+				   PROPERTY_NAME="LineSource"
+				   SEQUENCE="17"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   COMMENTS="CHANP2 23-MAY-18 : Added for CHG0032950"
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id180"
+				   OUTPUT_ARG="SC HD SR Status"
+				   PROPERTY_NAME="HDSRStatus"
+				   SEQUENCE="18"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id60"
+				   OUTPUT_ARG="SC Line Type"
+				   PROPERTY_NAME="LineType"
+				   SEQUENCE="6"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id70"
+				   OUTPUT_ARG="Root Order Item Id"
+				   PROPERTY_NAME="RootOrderItemId"
+				   SEQUENCE="7"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id80"
+				   OUTPUT_ARG="SC Root Asset Duplicate Flag"
+				   PROPERTY_NAME="RootAssetDuplicateFlag"
+				   SEQUENCE="8"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   COMMENTS="[Venkat Kota][Added for defect 3187][5/27/2015]"
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Line Root Order Item Id90"
+				   OUTPUT_ARG="SC Field Service Id"
+				   PROPERTY_NAME="FSId"
+				   SEQUENCE="9"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="ValueFields"
+				   SEQUENCE="5"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="Root Order Item Id, SC Line Type, SC Root Asset Duplicate Flag,SC Field Service Id,SC Root Item Ship Method,SC Order Revision Number,Request To Cancel,SC Order Status,Root Product Id,SC Product Primary Product Line,SC SKU Data Source Calc,SC HD SR Status"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="ReadInboundMsg"
+			   BUSINESS_SERVICE_NAME="SC Integration Functions Service"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*368 120 464 1689*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Get Order/Item Details"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*02*P17*340 1444*NPts1*22*P07*368 1444*ToHS1*28*ArrowEnd1*4"
+				   NAME="Connector 12"
+				   TO_STEP_NAME="Query Order Cancel Reason"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Get Order/Item Details"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*02*P17*340 1444*NPts1*22*P07*368 1444*ToHS1*28*ArrowEnd1*4"
+					   NAME="Connector 12"
+					   TO_STEP_NAME="Query Order Cancel Reason"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P26*976 124*FrHS1*12*P16*416 124*NPts1*42*P07*416 1202*P37*976 1924*ToHS1*19*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 4"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Get Order/Item Details"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P26*976 124*FrHS1*12*P16*416 124*NPts1*42*P07*416 1202*P37*976 1924*ToHS1*19*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 4"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Order/Item Details1"
+				   OUTPUT_ARG="LineParentId"
+				   PROPERTY_NAME="LineParentId"
+				   SEQUENCE="1"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Order/Item Details10"
+				   OUTPUT_ARG="LineInvDate"
+				   PROPERTY_NAME="LineInvDate"
+				   SEQUENCE="10"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Order/Item Details11"
+				   OUTPUT_ARG="LineInvNum"
+				   PROPERTY_NAME="LineInvNum"
+				   SEQUENCE="11"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Order/Item Details120"
+				   OUTPUT_ARG="TrackingNumExists"
+				   PROPERTY_NAME="TrackingNumExists"
+				   SEQUENCE="12"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Order/Item Details4"
+				   OUTPUT_ARG="LineStatus"
+				   PROPERTY_NAME="LineStatus"
+				   SEQUENCE="4"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Order/Item Details5"
+				   OUTPUT_ARG="OrderId"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="5"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Order/Item Details6"
+				   OUTPUT_ARG="OrderStatus"
+				   PROPERTY_NAME="OrderStatus"
+				   SEQUENCE="6"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Get Order/Item Details7"
+				   OUTPUT_ARG="PaymentId"
+				   PROPERTY_NAME="PaymentId"
+				   SEQUENCE="7"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="OrderMessage"
+				   PROPERTY_NAME="OrderMessage"
+				   SEQUENCE="1"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="UpdLineId"
+				   PROPERTY_NAME="LineId"
+				   SEQUENCE="5"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*353 507 449 5559*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="In Transit SR?"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*10*0*0*0*6*TxtPos1*09*LineWidth1*22*P27*600 6844*FrHS1*22*P17*600 5314*NPts1*32*P07*449 5317*TxtPerc2*404*ToHS1*18*ArrowEnd1*4"
+				   NAME="No"
+				   TO_STEP_NAME="End"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="In Transit SR?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*10*0*0*0*6*TxtPos1*09*LineWidth1*22*P27*600 6844*FrHS1*22*P17*600 5314*NPts1*32*P07*449 5317*TxtPerc2*404*ToHS1*18*ArrowEnd1*4"
+					   NAME="No"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(LineStatus All Must Match (Ignore Case)(&apos;In-Transit to Customer&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*401 5804*NPts1*22*P07*401 5554*ToHS1*18*ArrowEnd1*4"
+				   NAME="Yes"
+				   TO_STEP_NAME="Update Status - INTRANSIT"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="In Transit SR?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*401 5804*NPts1*22*P07*401 5554*ToHS1*18*ArrowEnd1*4"
+					   NAME="Yes"
+					   TO_STEP_NAME="Update Status - INTRANSIT"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Yes3"
+					   OPERATION="EQ_ALL_NC"
+					   PROPERTY_NAME="LineStatus"
+					   SEQUENCE="3"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="In-Transit to Customer"
+						   NAME="Yes31"
+						   SEQUENCE="1"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="SubmitRequest"
+			   BUSINESS_SERVICE_NAME="Asynchronous Server Requests"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*5*0*0*0*8*FontSize1*91*r15*432 390 504 4389*FillBgClr5*655358*FontName6*Tahoma8*ArrowEnd1*1"
+			   NAME="Inactivate the Assets"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*600 6844*FrHS1*22*P17*600 4144*NPts1*32*P07*504 4144*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 14"
+				   TO_STEP_NAME="End"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Inactivate the Assets"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*600 6844*FrHS1*22*P17*600 4144*NPts1*32*P07*504 4144*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 14"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 2524*FrHS1*12*P17*468 2525*HdTxt1*Y4*NPts1*42*P07*468 3902*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 3"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Inactivate the Assets"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 2524*FrHS1*12*P17*468 2525*HdTxt1*Y4*NPts1*42*P07*468 3902*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 3"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Component"
+				   SEQUENCE="17"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="WfProcMgr"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inputs"
+				   PROPERTY_NAME="AsyncWFInputs"
+				   SEQUENCE="18"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Inactivate the Assets40"
+				   OUTPUT_ARG="reqId"
+				   PROPERTY_NAME="Async Request Id"
+				   SEQUENCE="4"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r14*49 276 145 3249*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="Line Update?"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P27*168 2524*FrHS1*12*P16*97 2524*NPts1*52*P06*97 2762*P37*168 2084*ToHS1*02*P47*246 2088*ArrowEnd1*4"
+				   NAME="No"
+				   TO_STEP_NAME="Update Finance Pay Status"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Line Update?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P27*168 2524*FrHS1*12*P16*97 2524*NPts1*52*P06*97 2762*P37*168 2084*ToHS1*02*P47*246 2088*ArrowEnd1*4"
+					   NAME="No"
+					   TO_STEP_NAME="Update Finance Pay Status"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(UpdateType All Must Match (Ignore Case)(&apos;Line Update&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*178 3004*NPts1*22*P07*145 3004*ToHS1*08*ArrowEnd1*4"
+				   NAME="Yes"
+				   TO_STEP_NAME="Get Line Root Order Item Id"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Line Update?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*178 3004*NPts1*22*P07*145 3004*ToHS1*08*ArrowEnd1*4"
+					   NAME="Yes"
+					   TO_STEP_NAME="Get Line Root Order Item Id"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Yes1"
+					   OPERATION="EQ_ALL_NC"
+					   PROPERTY_NAME="UpdateType"
+					   SEQUENCE="3"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Line Update"
+						   NAME="Yes11"
+						   SEQUENCE="1"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r16*928 192 1024 2409*FillBgClr8*100794878*ArrowEnd1*1"
+			   NAME="Log Errors"
+			   SUBPROCESS_NAME="SC Capture Error Workflow"
+			   TYPE="SUB_PROCESS"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*648 7084*FrHS1*32*P17*976 7084*NPts1*32*P07*976 2404*ToHS1*28*ArrowEnd1*4"
+				   NAME="Connector 4"
+				   TO_STEP_NAME="End"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Log Errors"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*648 7084*FrHS1*32*P17*976 7084*NPts1*32*P07*976 2404*ToHS1*28*ArrowEnd1*4"
+					   NAME="Connector 4"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Description"
+				   SEQUENCE="1"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="Left([&amp;Error Message],1999)"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Error Number"
+				   SEQUENCE="2"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="Left([&amp;Error Code],29)"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Error Type"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="5"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Process ID"
+				   PROPERTY_NAME="Process Instance Id"
+				   SEQUENCE="3"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Process Name"
+				   SEQUENCE="4"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="SC EAI Order Updates"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Sub Task ID"
+				   PROPERTY_NAME="LineId"
+				   SEQUENCE="6"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*852 549 948 5979*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="Payments exists?"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*10*0*0*0*6*TxtPos1*09*LineWidth1*22*P27*865 6284*FrHS1*32*P17*900 6284*NPts1*32*P07*900 5977*TxtPerc2*704*ToHS1*28*ArrowEnd1*4"
+				   NAME="N"
+				   TO_STEP_NAME="Set SIQ Book Input"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Payments exists?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*10*0*0*0*6*TxtPos1*09*LineWidth1*22*P27*865 6284*FrHS1*32*P17*900 6284*NPts1*32*P07*900 5977*TxtPerc2*704*ToHS1*28*ArrowEnd1*4"
+					   NAME="N"
+					   TO_STEP_NAME="Set SIQ Book Input"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(Siebel Operation Object Id Is Not Null)"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*12*P17*900 5164*NPts1*22*P07*900 5494*ToHS1*38*ArrowEnd1*4"
+				   NAME="Y"
+				   TO_STEP_NAME="Update Payments"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Payments exists?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*12*P17*900 5164*NPts1*22*P07*900 5494*ToHS1*38*ArrowEnd1*4"
+					   NAME="Y"
+					   TO_STEP_NAME="Update Payments"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Y1"
+					   OPERATION="IS_NOT_NULL"
+					   PROPERTY_NAME="Siebel Operation Object Id"
+					   SEQUENCE="2"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   DESCRIPTION="SIQ, Close/Cancelled updates, Revision updates, Comfort Ship notification"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*324 276 420 3249*FillBgClr8*100794878*ArrowEnd1*1"
+			   NAME="Post Processes"
+			   SUBPROCESS_NAME="SC EAI Order Updates - Post Updates"
+			   TYPE="SUB_PROCESS"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P27*108 3494*FrHS1*32*P17*372 3494*NPts1*42*P07*372 3242*P37*108 3904*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 18"
+				   TO_STEP_NAME="Check the Status"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Post Processes"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P27*108 3494*FrHS1*32*P17*372 3494*NPts1*42*P07*372 3242*P37*108 3904*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 18"
+					   TO_STEP_NAME="Check the Status"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*108 3494*FrHS1*32*P17*372 3495*HdTxt1*Y4*NPts1*42*P07*372 3242*P37*108 3904*ToHS1*19*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 0"
+				   TO_STEP_NAME="Check the Status"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Post Processes"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*108 3494*FrHS1*32*P17*372 3495*HdTxt1*Y4*NPts1*42*P07*372 3242*P37*108 3904*ToHS1*19*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 0"
+					   TO_STEP_NAME="Check the Status"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="HDSRStatus"
+				   PROPERTY_NAME="HDSRStatus"
+				   SEQUENCE="19"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="LineCancelFlag"
+				   PROPERTY_NAME="LineCancelFlag"
+				   SEQUENCE="11"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="LineId"
+				   PROPERTY_NAME="LineId"
+				   SEQUENCE="1"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="LineInvDate"
+				   PROPERTY_NAME="LineInvDate"
+				   SEQUENCE="2"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="LineInvNum"
+				   PROPERTY_NAME="LineInvNum"
+				   SEQUENCE="3"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="LineStatus"
+				   PROPERTY_NAME="LineStatus"
+				   SEQUENCE="4"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="LineType"
+				   PROPERTY_NAME="LineType"
+				   SEQUENCE="5"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="OrderId"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="6"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="OrderRevisionNum"
+				   PROPERTY_NAME="OrderRevisionNum"
+				   SEQUENCE="10"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="OrderStatus"
+				   PROPERTY_NAME="OrderStatus"
+				   SEQUENCE="7"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="RootOrderItemId"
+				   PROPERTY_NAME="RootOrderItemId"
+				   SEQUENCE="8"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="RootOrderItemProdId"
+				   PROPERTY_NAME="RootOrderItemProdId"
+				   SEQUENCE="16"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="RootOrderItemShipVia"
+				   PROPERTY_NAME="RootOrderItemShipVia"
+				   SEQUENCE="9"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="StoredHeaderStatus"
+				   PROPERTY_NAME="StoredHeaderStatus"
+				   SEQUENCE="15"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="TrackingNumExists"
+				   PROPERTY_NAME="TrackingNumExists"
+				   SEQUENCE="16"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_COMPONENT="PDS Simplified Order Entry - Orders"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*244 120 340 1689*FillBgClr8*134218238*ArrowEnd1*1"
+			   NAME="Query Order Cancel Reason"
+			   OPERATION="QUERY"
+			   TYPE="SIEBEL_OPER"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P26*219 964*FrHS1*02*P17*219 1444*NPts1*52*P07*244 1442*P36*108 964*ToHS1*12*P47*108 1208*ArrowEnd1*4"
+				   NAME="Connector 15"
+				   TO_STEP_NAME="Cancel Header?"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Query Order Cancel Reason"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*10*0*0*0*9*LineWidth1*22*P26*219 964*FrHS1*02*P17*219 1444*NPts1*52*P07*244 1442*P36*108 964*ToHS1*12*P47*108 1208*ArrowEnd1*4"
+					   NAME="Connector 15"
+					   TO_STEP_NAME="Cancel Header?"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P26*976 124*FrHS1*12*P16*292 125*HdTxt1*Y4*NPts1*42*P07*292 1202*P37*976 1924*ToHS1*19*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 9"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Query Order Cancel Reason"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P26*976 124*FrHS1*12*P16*292 125*HdTxt1*Y4*NPts1*42*P07*292 1202*P37*976 1924*ToHS1*19*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 9"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   BUSINESS_COMPONENT="PDS Simplified Order Entry - Orders"
+				   BUSINESS_COMPONENT_FIELD="Cancel Reason"
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query Order Cancel Reason3"
+				   PROPERTY_NAME="OrderCancelReason"
+				   SEQUENCE="3"
+				   TYPE="BUSCOMP"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   BUSINESS_COMPONENT="PDS Simplified Order Entry - Orders"
+				   INACTIVE="N"
+				   INPUT_FLAG="S"
+				   NAME="S:Query Order Cancel Reason1"
+				   OUTPUT_ARG="PDS Simplified Order Entry - Orders"
+				   SEQUENCE="1"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="&quot;[Id] = &apos;&quot; + [&amp;OrderId] + &quot;&apos;&quot;"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="QueryBuscomp"
+			   BUSINESS_SERVICE_NAME="SC Integration Functions Service"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r17*1080 262 1176 3109*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Query Order Details"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 07:42:49"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P18*1128 3384*NPts1*22*P08*1128 3104*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 20"
+				   TO_STEP_NAME="Check ECOM/WEB"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Query Order Details"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P18*1128 3384*NPts1*22*P08*1128 3104*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 20"
+					   TO_STEP_NAME="Check ECOM/WEB"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P28*1055 2164*FrHS1*02*P18*1055 2865*HdTxt1*Y4*NPts1*42*P08*1080 2862*P38*1024 2164*ToHS1*29*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 11"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Query Order Details"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P28*1055 2164*FrHS1*02*P18*1055 2865*HdTxt1*Y4*NPts1*42*P08*1080 2862*P38*1024 2164*ToHS1*29*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 11"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="BC Name"
+				   SEQUENCE="1"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="PDS Simplified Order Entry - Orders"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="BO Name"
+				   SEQUENCE="3"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="PDS Simplified Order"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Field List"
+				   SEQUENCE="4"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="SC Location Type|SC Location Sub Channel|Revision|Order Type Code|SC Sub-Type"
+				   UPDATED="12/29/2020 07:18:43"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query Order Details100"
+				   OUTPUT_ARG="Field Values.SC Sub-Type"
+				   PROPERTY_NAME="SCOrderSubType"
+				   SEQUENCE="10"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 07:42:49"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 07:39:16"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query Order Details5"
+				   OUTPUT_ARG="Record Count"
+				   PROPERTY_NAME="Count"
+				   SEQUENCE="5"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query Order Details6"
+				   OUTPUT_ARG="Field Values.SC Location Type"
+				   PROPERTY_NAME="Channel"
+				   SEQUENCE="6"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query Order Details70"
+				   OUTPUT_ARG="Field Values.SC Location Sub Channel"
+				   PROPERTY_NAME="Subchannel"
+				   SEQUENCE="7"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query Order Details8"
+				   OUTPUT_ARG="Field Values.Revision"
+				   PROPERTY_NAME="Revision"
+				   SEQUENCE="8"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query Order Details90"
+				   OUTPUT_ARG="Field Values.Order Type Code"
+				   PROPERTY_NAME="OrderTypeCode"
+				   SEQUENCE="9"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 07:37:53"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 07:37:04"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Search Expr"
+				   SEQUENCE="2"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="&apos;([Id] = &apos; + &apos;&quot;&apos; + [&amp;OrderIdA] + &apos;&quot;)&apos;"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_COMPONENT="PDS Simplified Order Entry - Orders"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r14*72 588 144 6369*FillBgClr8*134218238*ArrowEnd1*1"
+			   NAME="Query Order Header"
+			   OPERATION="QUERY"
+			   TYPE="SIEBEL_OPER"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*204 6124*NPts1*22*P07*144 6124*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 9"
+				   TO_STEP_NAME="Update Asset Duplicate Flag"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Query Order Header"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*204 6124*NPts1*22*P07*144 6124*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 9"
+					   TO_STEP_NAME="Update Asset Duplicate Flag"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 6684*FrHS1*32*P17*108 6685*HdTxt1*Y4*NPts1*42*P07*108 6362*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 7"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Query Order Header"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 6684*FrHS1*32*P17*108 6685*HdTxt1*Y4*NPts1*42*P07*108 6362*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 7"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Id"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="1"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="BCNextRecord"
+			   BUSINESS_SERVICE_NAME="SIA BC Utility Service"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*724 468 820 5169*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Query Payments"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*852 5734*FrHS1*32*P17*772 5734*NPts1*32*P07*772 5164*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 6"
+				   TO_STEP_NAME="Payments exists?"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Query Payments"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*852 5734*FrHS1*32*P17*772 5734*NPts1*32*P07*772 5164*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 6"
+					   TO_STEP_NAME="Payments exists?"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Business Component Name"
+				   SEQUENCE="1"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="Payments"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="From First"
+				   PROPERTY_NAME="Execute Query"
+				   SEQUENCE="2"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query Payments4"
+				   PROPERTY_NAME="Execute Query"
+				   SEQUENCE="4"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="N"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Query Payments5"
+				   OUTPUT_ARG="Row Id"
+				   PROPERTY_NAME="Siebel Operation Object Id"
+				   SEQUENCE="5"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   COMMENTS="Sanjeev: 3/13/2018: CHG0033101."
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Search Specification"
+				   SEQUENCE="3"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="&quot;[Order Id] =&apos;&quot; + [&amp;Object Id] + &quot;&apos; AND ([Order Type Code] = &apos;Sales&apos; OR [Transaction Amount] &gt; 0) AND ([Payment Method] &lt;&gt; &apos;&quot; + LookupValue(&quot;PAYMENT_METHOD_CODE&quot;, &quot;Reward&quot;) + &quot;&apos; OR [Transaction Amount] &gt; 0) AND ([Payment Method] &lt;&gt; &apos;&quot; + LookupValue(&quot;PAYMENT_METHOD_CODE&quot;, &quot;Financing&quot;) + &quot;&apos; AND [SC Payment Status] = &apos;&quot; + LookupValue(&quot;FUNDRQ_STATUS&quot;, &quot;Authorized&quot;) + &quot;&apos; )&quot;"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r14*60 507 156 5559*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="Root Asset Duplicate Flag IS NULL"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*353 5314*NPts1*22*P07*156 5314*ToHS1*08*ArrowEnd1*4"
+				   NAME="No"
+				   TO_STEP_NAME="In Transit SR?"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Root Asset Duplicate Flag IS NULL"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*353 5314*NPts1*22*P07*156 5314*ToHS1*08*ArrowEnd1*4"
+					   NAME="No"
+					   TO_STEP_NAME="In Transit SR?"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(RootAssetDuplicateFlag Is Null)"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*108 5884*NPts1*22*P07*108 5554*ToHS1*18*ArrowEnd1*4"
+				   NAME="Yes"
+				   TO_STEP_NAME="Query Order Header"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Root Asset Duplicate Flag IS NULL"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*108 5884*NPts1*22*P07*108 5554*ToHS1*18*ArrowEnd1*4"
+					   NAME="Yes"
+					   TO_STEP_NAME="Query Order Header"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Yes1"
+					   OPERATION="IS_NULL"
+					   PROPERTY_NAME="RootAssetDuplicateFlag"
+					   SEQUENCE="9"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="Echo"
+			   BUSINESS_SERVICE_NAME="Workflow Utilities"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*724 120 820 1689*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Set Inputs"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 1924*NPts1*22*P07*772 1684*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 7"
+				   TO_STEP_NAME="Create/Update HD SR"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Set Inputs"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 1924*NPts1*22*P07*772 1684*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 7"
+					   TO_STEP_NAME="Create/Update HD SR"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp"
+				   PROPERTY_NAME="AsyncWFInputs"
+				   SEQUENCE="5"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.Object Id"
+				   PROPERTY_NAME="OrderIdA"
+				   SEQUENCE="6"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.ProcessName"
+				   SEQUENCE="7"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="SC Field Service SR Workflow"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Set Inputs4"
+				   OUTPUT_ARG="OrderIdA"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="4"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Set Inputs80"
+				   OUTPUT_ARG="Inp"
+				   PROPERTY_NAME="AsyncWFInputs"
+				   SEQUENCE="8"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Set Inputs90"
+				   OUTPUT_ARG="OrderIdA"
+				   PROPERTY_NAME="Object Id"
+				   SEQUENCE="9"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="OrderIdA"
+				   PROPERTY_NAME="OrderIdA"
+				   SEQUENCE="2"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="OrderMessage"
+				   PROPERTY_NAME="OrderMessage"
+				   SEQUENCE="3"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="Echo"
+			   BUSINESS_SERVICE_NAME="Workflow Utilities"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*312 390 384 4389*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Set Inputs for Async WF"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*432 4144*NPts1*22*P07*384 4144*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 13"
+				   TO_STEP_NAME="Inactivate the Assets"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Set Inputs for Async WF"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P17*432 4144*NPts1*22*P07*384 4144*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 13"
+					   TO_STEP_NAME="Inactivate the Assets"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp"
+				   PROPERTY_NAME="AsyncWFInputs"
+				   SEQUENCE="10"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.Object Id"
+				   PROPERTY_NAME="LineId"
+				   SEQUENCE="11"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.OrderLineId"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="13"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.OrderLineStatus"
+				   PROPERTY_NAME="LineStatus"
+				   SEQUENCE="14"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.ProcessName"
+				   SEQUENCE="12"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="SC Order Line Status Update"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Set Inputs for Async WF16"
+				   OUTPUT_ARG="Inp"
+				   PROPERTY_NAME="AsyncWFInputs"
+				   SEQUENCE="16"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="Echo"
+			   BUSINESS_SERVICE_NAME="Workflow Utilities"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*724 336 820 3849*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Set RMA Lbl WF Inputs"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 4024*NPts1*22*P07*772 3844*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 0"
+				   TO_STEP_NAME="Create RMA Labels"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Set RMA Lbl WF Inputs"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*772 4024*NPts1*22*P07*772 3844*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 0"
+					   TO_STEP_NAME="Create RMA Labels"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp"
+				   PROPERTY_NAME="RMAWFInputs"
+				   SEQUENCE="1"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.Object Id"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="2"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.ProcessName"
+				   SEQUENCE="3"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="SC RMA Label Generation"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Set RMA Lbl WF Inputs4"
+				   OUTPUT_ARG="Inp"
+				   PROPERTY_NAME="RMAWFInputs"
+				   SEQUENCE="4"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="Echo"
+			   BUSINESS_SERVICE_NAME="Workflow Utilities"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*769 604 865 6529*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Set SIQ Book Input"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*02*P17*745 6284*NPts1*22*P07*769 6284*ToHS1*28*ArrowEnd1*4"
+				   NAME="Connector 23"
+				   TO_STEP_NAME="Call Async Book SIQ"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Set SIQ Book Input"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*02*P17*745 6284*NPts1*22*P07*769 6284*ToHS1*28*ArrowEnd1*4"
+					   NAME="Connector 23"
+					   TO_STEP_NAME="Call Async Book SIQ"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp"
+				   PROPERTY_NAME="AsyncSIQInputs"
+				   SEQUENCE="10"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.Event Type"
+				   SEQUENCE="12"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="Sale"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.Object Id"
+				   PROPERTY_NAME="OrderId"
+				   SEQUENCE="11"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Inp.ProcessName"
+				   SEQUENCE="13"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="SC Send SleepIQ Order Lines to EBS"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Set SIQ Book Input140"
+				   OUTPUT_ARG="Inp"
+				   PROPERTY_NAME="AsyncSIQInputs"
+				   SEQUENCE="14"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r12*60 24 156 729*FillBgClr8*167641088*ArrowEnd1*1"
+			   NAME="Start"
+			   TYPE="START"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*552 484*NPts1*22*P06*144 484*ToHS1*08*ArrowEnd1*4"
+				   NAME="Start"
+				   TO_STEP_NAME="Update Order/Line Statuses"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Start"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*22*P16*552 484*NPts1*22*P06*144 484*ToHS1*08*ArrowEnd1*4"
+					   NAME="Start"
+					   TO_STEP_NAME="Update Order/Line Statuses"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_COMPONENT="PDS Simplified Order Entry - Line Items"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*204 588 264 6369*FillBgClr8*134218238*ArrowEnd1*1"
+			   NAME="Update Asset Duplicate Flag"
+			   OPERATION="UPDATE"
+			   TYPE="SIEBEL_OPER"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*353 5314*FrHS1*12*P17*234 5314*NPts1*32*P07*234 5884*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 10"
+				   TO_STEP_NAME="In Transit SR?"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Asset Duplicate Flag"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*353 5314*FrHS1*12*P17*234 5314*NPts1*32*P07*234 5884*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 10"
+					   TO_STEP_NAME="In Transit SR?"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 6684*FrHS1*32*P17*234 6685*HdTxt1*Y4*NPts1*42*P07*234 6362*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 5"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Asset Duplicate Flag"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 6684*FrHS1*32*P17*234 6685*HdTxt1*Y4*NPts1*42*P07*234 6362*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 5"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   BUSINESS_COMPONENT="PDS Simplified Order Entry - Line Items"
+				   INACTIVE="N"
+				   INPUT_FLAG="S"
+				   NAME="S:Update Asset Duplicate Flag2"
+				   OUTPUT_ARG="PDS Simplified Order Entry - Line Items"
+				   SEQUENCE="2"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="&quot;[Id] = &apos;&quot; + [&amp;RootOrderItemId] + &quot;&apos;&quot;"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Asset Duplicate Flag"
+				   SEQUENCE="4"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="N"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_COMPONENT="Payments"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*246 184 342 2329*FillBgClr8*134218238*ArrowEnd1*1"
+			   NAME="Update Finance Pay Status"
+			   OPERATION="UPDATE"
+			   TYPE="SIEBEL_OPER"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*600 6844*FrHS1*22*P17*600 2084*NPts1*32*P07*342 2084*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 17"
+				   TO_STEP_NAME="End"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Finance Pay Status"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*600 6844*FrHS1*22*P17*600 2084*NPts1*32*P07*342 2084*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 17"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="S"
+				   NAME="S:Update Finance Pay Status16"
+				   OUTPUT_ARG="Payments"
+				   SEQUENCE="16"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="&quot;[Id] = &apos;&quot; + [&amp;PaymentId] + &quot;&apos; AND [Transaction Amount]&lt;&gt;[SC Settled Amount]&quot;"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Payment Status"
+				   SEQUENCE="15"
+				   TYPE="LITERAL"
+				   VALUE_SEARCH_SPECIFICATION="Partially Settled"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_COMPONENT="PDS Simplified Order Entry - Orders"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r14*48 192 144 2409*FillBgClr8*134218238*ArrowEnd1*1"
+			   NAME="Update Order Status"
+			   OPERATION="UPDATE"
+			   TYPE="SIEBEL_OPER"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P26*24 3004*FrHS1*02*P16*24 2164*NPts1*42*P06*48 2162*P36*49 3004*ToHS1*08*ArrowEnd1*4"
+				   NAME="Connector 11"
+				   TO_STEP_NAME="Line Update?"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Order Status"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P26*24 3004*FrHS1*02*P16*24 2164*NPts1*42*P06*48 2162*P36*49 3004*ToHS1*08*ArrowEnd1*4"
+					   NAME="Connector 11"
+					   TO_STEP_NAME="Line Update?"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*12*0*0*0*9*LineWidth1*22*P27*204 2524*FrHS1*22*P17*204 2165*HdTxt1*Y4*NPts1*52*P07*144 2162*P37*976 2524*ToHS1*39*LineColor3*2552*P47*976 2408*ArrowEnd1*4"
+				   NAME="Error Exception 8"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Order Status"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*12*0*0*0*9*LineWidth1*22*P27*204 2524*FrHS1*22*P17*204 2165*HdTxt1*Y4*NPts1*52*P07*144 2162*P37*976 2524*ToHS1*39*LineColor3*2552*P47*976 2408*ArrowEnd1*4"
+					   NAME="Error Exception 8"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   BUSINESS_COMPONENT="PDS Simplified Order Entry - Orders"
+				   INACTIVE="N"
+				   INPUT_FLAG="S"
+				   NAME="S:Update Order Status3"
+				   OUTPUT_ARG="PDS Simplified Order Entry - Orders"
+				   SEQUENCE="3"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="&quot;[Id] = &apos;&quot; + [&amp;OrderId] + &quot;&apos;&quot;"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="Status"
+				   SEQUENCE="4"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="LookupValue(&quot;FS_ORDER_STATUS&quot;,&quot;Cancelled&quot;)"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r13*552 24 648 729*FillBgClr8*100794878*ArrowEnd1*1"
+			   NAME="Update Order/Line Statuses"
+			   SUBPROCESS_NAME="SC EAI Order Updates - Status"
+			   TYPE="SUB_PROCESS"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*600 1204*NPts1*22*P06*600 724*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 1"
+				   TO_STEP_NAME="Update Type?"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Order/Line Statuses"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*32*P17*600 1204*NPts1*22*P06*600 724*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 1"
+					   TO_STEP_NAME="Update Type?"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Update Order/Line Statuses30"
+				   OUTPUT_ARG="UpdateType"
+				   PROPERTY_NAME="UpdateType"
+				   SEQUENCE="3"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="O"
+				   NAME="O:Update Order/Line Statuses40"
+				   OUTPUT_ARG="LineId"
+				   PROPERTY_NAME="LineId"
+				   SEQUENCE="4"
+				   TYPE="ARGUMENT"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="OrderMessage"
+				   PROPERTY_NAME="OrderMessage"
+				   SEQUENCE="1"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="UpdateType"
+				   PROPERTY_NAME="UpdateType"
+				   SEQUENCE="2"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_COMPONENT="Payments"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*852 468 948 5169*FillBgClr8*134218238*ArrowEnd1*1"
+			   NAME="Update Payments"
+			   OPERATION="UPDATE"
+			   TYPE="SIEBEL_OPER"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*02*P17*820 4924*NPts1*22*P07*852 4924*ToHS1*28*ArrowEnd1*4"
+				   NAME="Connector 19"
+				   TO_STEP_NAME="Query Payments"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Payments"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*02*P17*820 4924*NPts1*22*P07*852 4924*ToHS1*28*ArrowEnd1*4"
+					   NAME="Connector 19"
+					   TO_STEP_NAME="Query Payments"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Payment Settlement Date"
+				   SEQUENCE="4"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="TimeStamp()"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Payment Status"
+				   SEQUENCE="1"
+				   TYPE="EXPRESSION"
+				   VALUE_SEARCH_SPECIFICATION="LookupValue(&quot;FUNDRQ_STATUS&quot;, &quot;Settled&quot;)"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+				<WF_STEP_I_O_ARGUMENT
+				   BUSINESS_COMPONENT="Payments"
+				   BUSINESS_COMPONENT_FIELD="Transaction Amount"
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="SC Settled Amount"
+				   SEQUENCE="2"
+				   TYPE="BUSCOMP"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   BUSINESS_SERVICE_METHOD="INTRANSIT-Status"
+			   BUSINESS_SERVICE_NAME="SC Field Service SR Service"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*353 580 449 6289*FillBgClr8*134217218*ArrowEnd1*1"
+			   NAME="Update Status - INTRANSIT"
+			   TYPE="TASK"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*600 6844*FrHS1*22*P17*600 6044*NPts1*32*P07*449 6044*ToHS1*18*ArrowEnd1*4"
+				   NAME="Connector 16"
+				   TO_STEP_NAME="End"
+				   TYPE="CONNECTOR"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Status - INTRANSIT"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*22*P27*600 6844*FrHS1*22*P17*600 6044*NPts1*32*P07*449 6044*ToHS1*18*ArrowEnd1*4"
+					   NAME="Connector 16"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 6684*FrHS1*32*P17*401 6685*HdTxt1*Y4*NPts1*42*P07*401 6282*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+				   NAME="Error Exception 10"
+				   TO_STEP_NAME="Log Errors"
+				   TYPE="ERROR_EXC"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Status - INTRANSIT"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*11*0*0*0*9*LineWidth1*22*P27*976 6684*FrHS1*32*P17*401 6685*HdTxt1*Y4*NPts1*42*P07*401 6282*P37*976 2404*ToHS1*39*LineColor3*2558*ArrowEnd1*4"
+					   NAME="Error Exception 10"
+					   TO_STEP_NAME="Log Errors"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_I_O_ARGUMENT
+				   INACTIVE="N"
+				   INPUT_FLAG="I"
+				   NAME="LineId"
+				   PROPERTY_NAME="LineId"
+				   SEQUENCE="1"
+				   TYPE="PROPERTY"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+				</WF_STEP_I_O_ARGUMENT>
+			</WF_STEP>
+			<WF_STEP
+			   ALLOW_RETRY_FLAG="N"
+			   EDIT="Y"
+			   EVALUATE_ALL="Y"
+			   INACTIVE="N"
+			   LAYOUT="@0*0*3*0*0*0*1*r15*552 120 648 1689*FillBgClr8*134348798*ArrowEnd1*1"
+			   NAME="Update Type?"
+			   TYPE="DECISION_POINT"
+			   UPDATED="12/29/2020 06:53:22"
+			   UPDATED_BY="SYERUVA"
+			   CREATED="12/29/2020 06:53:22"
+			   CREATED_BY="SYERUVA">
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(UpdateType All Must Match (Ignore Case)(&apos;Booking Event&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*24*FrHS1*22*P17*724 1444*NPts1*22*P07*648 1447*TxtPerc2*404*ToHS1*08*ArrowEnd1*4"
+				   NAME="Booked"
+				   TO_STEP_NAME="Set Inputs"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Type?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*24*FrHS1*22*P17*724 1444*NPts1*22*P07*648 1447*TxtPerc2*404*ToHS1*08*ArrowEnd1*4"
+					   NAME="Booked"
+					   TO_STEP_NAME="Set Inputs"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Booked1"
+					   OPERATION="EQ_ALL_NC"
+					   PROPERTY_NAME="UpdateType"
+					   SEQUENCE="3"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Booking Event"
+						   NAME="Booked11"
+						   SEQUENCE="1"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(UpdateType All Must Match (Ignore Case)(&apos;Booking Error&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P28*1128 1804*FrHS1*32*P17*600 1804*NPts1*42*P07*600 1682*P38*1128 2624*ToHS1*18*ArrowEnd1*4"
+				   NAME="Booking Error"
+				   TO_STEP_NAME="Query Order Details"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Type?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*9*0*0*0*9*LineWidth1*22*P28*1128 1804*FrHS1*32*P17*600 1804*NPts1*42*P07*600 1682*P38*1128 2624*ToHS1*18*ArrowEnd1*4"
+					   NAME="Booking Error"
+					   TO_STEP_NAME="Query Order Details"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Booking Error5"
+					   OPERATION="EQ_ALL_NC"
+					   PROPERTY_NAME="UpdateType"
+					   SEQUENCE="5"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Booking Error"
+						   NAME="Booking Error52"
+						   SEQUENCE="2"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*24*FrHS1*32*P17*600 6844*NPts1*22*P07*600 1687*TxtPerc2*204*ToHS1*18*ArrowEnd1*4"
+				   NAME="Defaut"
+				   TO_STEP_NAME="End"
+				   TYPE="DEFAULT"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Type?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*8*0*0*0*9*LineWidth1*24*FrHS1*32*P17*600 6844*NPts1*22*P07*600 1687*TxtPerc2*204*ToHS1*18*ArrowEnd1*4"
+					   NAME="Defaut"
+					   TO_STEP_NAME="End"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+				</WF_STEP_BRANCH>
+				<WF_STEP_BRANCH
+				   EDIT="Y"
+				   EVENT_CANCEL_FLAG="N"
+				   EVENT_VISIBILITY="Enterprise"
+				   EXPRESSION="(UpdateType One Must Match (Ignore Case)(&apos;Header Update&apos; AND &apos;Line Update&apos;))"
+				   INACTIVE="N"
+				   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*02*P17*464 1444*NPts1*22*P07*552 1444*ToHS1*28*ArrowEnd1*4"
+				   NAME="Line or Header"
+				   TO_STEP_NAME="Get Order/Item Details"
+				   TYPE="DECISION"
+				   USER_EVENT_TIMEOUT="0"
+				   UPDATED="12/29/2020 06:53:22"
+				   UPDATED_BY="SYERUVA"
+				   CREATED="12/29/2020 06:53:22"
+				   CREATED_BY="SYERUVA">
+					<WF_BRANCH_CONNECTOR
+					   FROM_STEP_NAME="Update Type?"
+					   INACTIVE="N"
+					   LAYOUT="@0*0*7*0*0*0*9*LineWidth1*24*FrHS1*02*P17*464 1444*NPts1*22*P07*552 1444*ToHS1*28*ArrowEnd1*4"
+					   NAME="Line or Header"
+					   TO_STEP_NAME="Get Order/Item Details"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+					</WF_BRANCH_CONNECTOR>
+					<WF_BRANCH_CRITERIA
+					   COMPARE_TO="PROPERTY"
+					   EDIT="Y"
+					   INACTIVE="N"
+					   NAME="Line or Header1"
+					   OPERATION="EQ_ANY_NC"
+					   PROPERTY_NAME="UpdateType"
+					   SEQUENCE="5"
+					   UPDATED="12/29/2020 06:53:22"
+					   UPDATED_BY="SYERUVA"
+					   CREATED="12/29/2020 06:53:22"
+					   CREATED_BY="SYERUVA">
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Header Update"
+						   NAME="Line or Header11"
+						   SEQUENCE="1"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+						<WF_BRANCH_CRITERIA_VALUE
+						   EDIT="N"
+						   INACTIVE="N"
+						   LO_CHAR1="Line Update"
+						   NAME="Line or Header12"
+						   SEQUENCE="2"
+						   UPDATED="12/29/2020 06:53:22"
+						   UPDATED_BY="SYERUVA"
+						   CREATED="12/29/2020 06:53:22"
+						   CREATED_BY="SYERUVA">
+						</WF_BRANCH_CRITERIA_VALUE>
+					</WF_BRANCH_CRITERIA>
+				</WF_STEP_BRANCH>
+			</WF_STEP>
+		</WORKFLOW_PROCESS>
+	</PROJECT>
+</REPOSITORY>
+
+
+
