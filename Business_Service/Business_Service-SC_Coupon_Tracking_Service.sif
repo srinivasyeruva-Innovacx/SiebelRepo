@@ -13,7 +13,7 @@
 	   LOCKED="N"
 	   NAME="SC Coupons"
 	   UI_FREEZE="N"
-	   UPDATED="12/28/2020 05:25:48"
+	   UPDATED="12/31/2020 00:46:54"
 	   UPDATED_BY="SYERUVA"
 	   CREATED="01/08/2012 21:04:48"
 	   CREATED_BY="SADMIN"
@@ -31,7 +31,7 @@
 		   SERVER_ENABLED="N"
 		   STATE_MANAGEMENT_TYPE="Stateful"
 		   WEB_SERVICE_ENABLED="N"
-		   UPDATED="12/28/2020 05:41:53"
+		   UPDATED="12/31/2020 00:47:27"
 		   UPDATED_BY="SYERUVA"
 		   CREATED="03/19/2013 01:08:10"
 		   CREATED_BY="SADMIN">
@@ -599,7 +599,7 @@ try
 							 iErrCode = 2;
 							 return(&quot;Expired&quot;);
 					    }
-		        	 else if(sStatus == &quot;Used&quot; || sStatus == &quot;Donated&quot;)//01072015: KUMAS1: Change to Status instead on Sub Status
+		        	 else if(sStatus == &quot;Used&quot; || sStatus == &quot;Donated&quot;)//01072015: KUMAS1: Change to Status instead on Sub Status, 12272020 : SYERUVA Added Status &quot;Donated&quot; condition for STRY0038653
 			              {
 			                sErrMsg = &quot;Certificate is already used&quot;; 
 						    iErrCode = 3;
@@ -645,7 +645,7 @@ oBOContact = null;
 
 }"
 			   SEQUENCE="3"
-			   UPDATED="12/28/2020 05:25:48"
+			   UPDATED="12/31/2020 00:46:54"
 			   UPDATED_BY="SYERUVA"
 			   CREATED="11/20/2014 02:28:18"
 			   CREATED_BY="SADMIN">
